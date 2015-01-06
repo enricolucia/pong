@@ -1,5 +1,6 @@
 # Pong!
 ![alt tag](http://media.engadget.com/img/product/13/a77/atari-super-pong-c-140-kvy-100.jpg)
+
 A pure javascript pong game clone based on socket.io and canvas.
 
   - server socket.io integration
