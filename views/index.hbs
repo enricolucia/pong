@@ -1,0 +1,28 @@
+{{#partial "content"}}
+	<div class="lobby">
+		<div class="notifier">Token not valid</div>
+		<div class="panel choice-screen onscreen">
+			<div class="box">
+				<div class="btn join">Join</div>
+				<div class="btn create">Create</div>
+			</div>
+		</div>
+		<div class="panel join-screen">
+			<div class="box">
+				<input class="token" type="text" placeholder="Token...">
+				<div class="btn">Send</div>
+			</div>
+		</div>
+		<div class="panel create-screen">
+			<div class="box">
+				<div class="token">asdfe</div>
+				<span>Wait for opponent...</span>
+			</div>
+		</div>
+	</div>
+  <div id="score" class="score">0 - 0</div>
+  <canvas id="cx" width="100%" heigth="100%">
+  </canvas>
+{{/partial}}
+
+{{> mainlayout}}

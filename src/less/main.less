@@ -1,0 +1,174 @@
+html,body{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+#score{
+  position: fixed;
+  opacity: 0.7;
+  font: 14px bold Verdana;
+  color: white;
+  right: 10px;
+  top:10px;
+  line-height: 30px;
+  width: 60px;
+  z-index: 9999;
+
+  &.goal{
+    color: red;
+  }
+
+  &.right {
+    left: 10px;
+    right: auto;
+  }
+
+  &.portrait {
+    bottom: 10px;
+    top: auto;
+
+    &.right {
+      bottom: auto;
+      top: 10px;
+    }
+  }
+}
+
+canvas{
+  background: #00B081;
+}
+
+.lobby {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: green;
+  overflow: hidden;
+  z-index: 10000;
+
+  .notifier {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    color: white;
+    background: rgba(235, 60, 60, 1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+    z-index: 1;
+    font-family: helvetica;
+    letter-spacing: 2px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    line-height: 30px;
+    transform: translateY(-150%);
+    transition: transform 200ms ease-in-out;
+
+    &.visible {
+      transform: translateY(0px);
+    }
+  }
+
+
+  .panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    background: inherit;
+    transform: translateX(100%);
+
+    &.onscreen {
+      transform: translateX(0px);
+    }
+
+    .box {
+      position: relative;
+      margin: 0 auto;
+      width: 250px;
+      height: 150px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .btn {
+    color: #fff;
+    font-family: helvetica;
+    background: rgba(0,0,0,0.2);
+    border-radius: 3px;
+    padding: 20px 50px;
+    width: 250px;
+    box-sizing: border-box;
+    margin-bottom: 34px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .token {
+    color: #F7DB18;
+    font-size: 39px;
+    font-family: helvetica;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    padding: 7px 30px;
+    width: 250px;
+    box-sizing: border-box;
+    margin-bottom: 34px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .choice-screen {
+
+  }
+  .join-screen {
+
+    .token {
+      &:focus {
+        border: 1px solid #F7DB18;
+        outline: none;
+      }
+    }
+
+  }
+  .create-screen {
+
+    span {
+      display: inline-block;
+      font-family: helvetica;
+      color: white;
+      font-size: 20px;
+      letter-spacing: 1px;
+      animation: pulse 700ms alternate infinite;
+    }
+
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: .1;
+  }
+  100% {
+    opacity: 1;
+  }
+}

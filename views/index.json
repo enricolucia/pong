@@ -1,0 +1,7 @@
+{
+  "appScript": "index.js",
+
+  "content" : {
+    "title": "Pong this!"
+  }
+}
