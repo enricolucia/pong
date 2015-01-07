@@ -51,6 +51,7 @@ Make a change in your file and instantanously see your updates!
  - Implementing better game prompt messaging
  - Add Code Comments
  - Heroku deployment
+ - Port project to [Gladius Forge][gladius-forge]
 
 License
 ----
@@ -64,6 +65,7 @@ MIT
 [Node]:http://nodejs.org/
 [Socket.io]:http://socket.io/
 [es6-gulp-boilerplate]:https://www.npmjs.com/package/es6-gulp-boilerplate/
+[gladius-forge]:https://www.npmjs.com/package/gladius-forge/
 [enricolucia]:https://github.com/enricolucia
 [meesayen]:https://github.com/Meesayen
 [gulp]:http://gulpjs.com/
