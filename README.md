@@ -6,6 +6,8 @@ A pure javascript pong game clone based on socket.io and canvas.
   - server socket.io integration
   - online 2 players implementation
   - responsive and adpative ux/ui
+  - mobile friendly
+  - gestures oriented gameplay
   - tokenized lobby entry page
 
 ### Tech
@@ -30,7 +32,7 @@ $ npm install
 $ gulp
 ```
 ### Instruction
-- Open it on the browser
+- Open it in your browser from mobile or from your machine (opt in mobile emulation on your debugger)
 - Create a game
 - Join the room with a different device or different browser
 - Play it!
