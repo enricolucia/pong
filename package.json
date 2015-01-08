@@ -1,9 +1,6 @@
 {
   "name": "pong",
   "version": "0.0.1",
-  "scripts": {
-    "test": "gulp test"
-  },
   "dependencies": {
     "express": "^4.8.3",
     "handlebars": "^2.0.0",
@@ -12,5 +9,14 @@
     "gulp": "^3.8.7",
     "es6-gulp-boilerplate": "git+https://git@github.com/Meesayen/es6-gulp-boilerplate#v0.4.1",
     "hashids": "^1.0.0"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "scripts": {
+    "prestart": "npm install",
+    "start": "node bin/www",
+    "test": "gulp test",
+    "postinstall": "gulp production"
   }
 }
