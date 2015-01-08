@@ -12,7 +12,7 @@ deploy:
   provider: heroku
   skip_cleanup: true
   api_key:
-    secure: Vnijs1mbgZQjMV2kHePsTRFATLqLd++CSHpdbauaAYnXOzyqaWXNT1+/I6X3p2RmcoL7L0GDFGVKW0JaAoia76XSizeN4c5vIYk/ZU3dnyoAP/dD6uw0Vzxmv/8ogGZq9Mg6XRq8piORfxgsbGL8dOQ9ONl9VLLF9qIUTcdVMcQ=
+    secure: GI4p5+HpcPWAX5G1z8PL9Zp9gSgTfdkadd4bNy1d6LA2CKiYZMXx8fbjAp41qIU7RC2mQ07rxz7/6u7zFtP0tvH3iOYxuD5BvPUX2txzezuIibhJrD89RUIEHFpnVkt4nk7fF8WwpaGgx/3QJrpWAR/ImRA4Xg0jUG6eb1GUd7g=
   app: pongjs
   on:
     repo: enricolucia/pong
