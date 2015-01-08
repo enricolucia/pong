@@ -1,7 +1,7 @@
 /* jshint -W079 */
 var
   gulp = require('gulp'),
-  gulpBoilerplate = require('es6-gulp-boilerplate'),
+  gladius = require('gladius-forge'),
   server = require('./app');
 
 
@@ -9,7 +9,7 @@ var
  * Here you can configure the gulp build system with custom folders, different
  * build modules, etc.
  * ------------------------------------------------------------------------- */
-gulpBoilerplate.config(gulp, {
+gladius.config(gulp, {
   modules: {
     // module to use to preprocess your stylesheets. default: less
     // possible values: less, sass, sassCompass, stylus, myth.
@@ -26,9 +26,12 @@ gulpBoilerplate.config(gulp, {
       // scripts folder. default: scripts/
       scripts: '',
 
+      esnextExtension: '.es6.js',
+
       // templates and partials folder: default: ../views/, partials/
       templates: '',
-      partials: ''
+      partials: '',
+
     },
 
     out: {
@@ -58,7 +61,7 @@ gulpBoilerplate.config(gulp, {
  * a leading '!' to remove dependencies) or add additional sources (insert a
  * leading '!' to the path to delcare sources which should be ignored).
  * ------------------------------------------------------------------------- */
-gulpBoilerplate.setupTasks({
+gladius.setupTasks({
   'bundle-js': {
     deps: [],
     src: []
@@ -69,7 +72,10 @@ gulpBoilerplate.setupTasks({
   },
   'lint': {
     deps: [],
-    src: []
+    src: [
+      '!src/scripts/vendor/**/*',
+      '!src/scripts/mock/lib/**/*'
+    ]
   }
 });
 
@@ -77,7 +83,7 @@ gulpBoilerplate.setupTasks({
 /**
  * Add extra gulp tasks below
  * ------------------------------------------------------------------------- */
-var $ = gulpBoilerplate.getPlugins();
+var $ = gladius.getPlugins();
 
 // Check the Meesayen/es6-boilerplate repository on github for a sample usage.
 
@@ -92,7 +98,7 @@ gulp.task('publish-helpers', function() {
 /**
  * Here you plug additional watchers to gulp.
  * ------------------------------------------------------------------------- */
-gulpBoilerplate.setupWatchers(function(gulp) {
+gladius.setupWatchers(function(gulp) {
   gulp.watch('handlebars.helpers.js', ['publish-helpers']);
 });
 
@@ -102,7 +108,7 @@ gulpBoilerplate.setupWatchers(function(gulp) {
  * Here you can inject extra tasks into the main tasks. Those will be appendend
  * and concurrently run with other tasks.
  * ------------------------------------------------------------------------- */
-gulpBoilerplate.setupMain({
+gladius.setupMain({
   'development': [
     'publish-helpers'
   ],

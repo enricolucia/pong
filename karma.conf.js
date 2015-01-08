@@ -6,23 +6,20 @@ module.exports = function(config) {
       'scripts/vendor/*.js',
       'scripts/mock/server.js',
       'scripts/**/*.test.es6.js',
-      '../views/**/*.hbs',
       { pattern: 'scripts/**/*.js',
+        included: false },
+      { pattern: 'scripts/**/*.es6.js',
         included: false }
     ],
     preprocessors: {
       'scripts/mock/server.js': ['browserify'],
-      'scripts/**/*.test.es6': ['browserify'],
-      '../**/*.hbs': 'handlebars'
+      'scripts/**/*.test.es6.js': ['browserify']
     },
     browserify: {
-      // debug: true,
-      // watch: true,
-      transform: ['esnextify'],
+      transform: [
+        [{fileExt: '.es6.js'}, 'esnextify']
+      ],
       basedir: 'src/'
-    },
-    handlebarsPreprocessor: {
-      templates: 'Handlebars.templates'
     },
     colors: true,
     reporters: ['mocha'],

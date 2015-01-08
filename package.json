@@ -7,7 +7,7 @@
     "socket.io": "^1.1.0",
     "express-handlebars": "^1.0.1",
     "gulp": "^3.8.7",
-    "es6-gulp-boilerplate": "git+https://git@github.com/Meesayen/es6-gulp-boilerplate#v0.4.1",
+    "gladius-forge": "^1.1.2",
     "hashids": "^1.0.0"
   },
   "engines": {
