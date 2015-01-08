@@ -8,10 +8,9 @@ before_install:
 - sudo apt-get update -qq
 before_script:
 - npm install -g karma karma-cli
-before_deploy:
-- gulp production
 deploy:
   provider: heroku
+  skip_cleanup: true
   api_key:
     secure: Vnijs1mbgZQjMV2kHePsTRFATLqLd++CSHpdbauaAYnXOzyqaWXNT1+/I6X3p2RmcoL7L0GDFGVKW0JaAoia76XSizeN4c5vIYk/ZU3dnyoAP/dD6uw0Vzxmv/8ogGZq9Mg6XRq8piORfxgsbGL8dOQ9ONl9VLLF9qIUTcdVMcQ=
   app: pongjs

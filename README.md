@@ -1,10 +1,13 @@
 # Pong!
+![alt tag](http://media.engadget.com/img/product/13/a77/atari-super-pong-c-140-kvy-100.jpg)
 
 A pure javascript pong game clone based on socket.io and canvas.
 
   - server socket.io integration
   - online 2 players implementation
   - responsive and adpative ux/ui
+  - mobile friendly
+  - gestures oriented gameplay
   - tokenized lobby entry page
 
 ### Tech
@@ -29,7 +32,7 @@ $ npm install
 $ gulp
 ```
 ### Instruction
-- Open it on the browser
+- Open it in your browser from mobile or from your machine (opt in mobile emulation on your debugger)
 - Create a game
 - Join the room with a different device or different browser
 - Play it!
@@ -50,6 +53,7 @@ Make a change in your file and instantanously see your updates!
  - Implementing better game prompt messaging
  - Add Code Comments
  - Heroku deployment
+ - Port project to [Gladius Forge][gladius-forge]
 
 License
 ----
@@ -63,6 +67,7 @@ MIT
 [Node]:http://nodejs.org/
 [Socket.io]:http://socket.io/
 [es6-gulp-boilerplate]:https://www.npmjs.com/package/es6-gulp-boilerplate/
+[gladius-forge]:https://www.npmjs.com/package/gladius-forge/
 [enricolucia]:https://github.com/enricolucia
 [meesayen]:https://github.com/Meesayen
 [gulp]:http://gulpjs.com/
