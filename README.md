@@ -1,6 +1,8 @@
 # Pong!
 ![alt tag](http://media.engadget.com/img/product/13/a77/atari-super-pong-c-140-kvy-100.jpg)
 
+Live demo here: [heroku]
+
 A pure javascript pong game clone based on socket.io and canvas.
 
   - server socket.io integration
@@ -53,7 +55,6 @@ Make a change in your file and instantanously see your updates!
  - Implementing better game prompt messaging
  - Add Code Comments
  - Heroku deployment
- - Port project to [Gladius Forge][gladius-forge]
 
 License
 ----
@@ -64,6 +65,7 @@ MIT
 
 **Free Software, Hell Yeah!**
 
+[heroku]:http://pongjs.herokuapp.com/
 [Node]:http://nodejs.org/
 [Socket.io]:http://socket.io/
 [es6-gulp-boilerplate]:https://www.npmjs.com/package/es6-gulp-boilerplate/
