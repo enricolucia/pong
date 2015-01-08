@@ -1,4 +1,7 @@
 # Pong!
+[![Build Status](https://travis-ci.org/enricolucia/pong.svg?branch=master)](https://travis-ci.org/enricolucia/pong)
+![Heroku](https://heroku-badge.herokuapp.com/?app=pongjs)
+
 ![alt tag](http://media.engadget.com/img/product/13/a77/atari-super-pong-c-140-kvy-100.jpg)
 
 Live demo here: [heroku]
