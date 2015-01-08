@@ -39,7 +39,7 @@ $ gulp
 ### Instruction
 - Open it in your browser from mobile or from your machine (opt in mobile emulation on your debugger)
 - Create a game
-- Join the room with a different device or different browser
+- Wait for the opponent to join the room or with a different device or different browser
 - Play it!
 
 ### Development
