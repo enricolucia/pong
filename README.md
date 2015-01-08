@@ -36,7 +36,7 @@ Install npm dependencies and gulp app deployment.
 $ npm install
 $ gulp
 ```
-### Instruction
+### How to play
 - Open it in your browser from mobile or from your machine (opt in mobile emulation on your debugger)
 - Create a game
 - Wait for the opponent to join the room or with a different device or different browser
