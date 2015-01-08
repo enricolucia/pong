@@ -1,6 +1,6 @@
 {
   "name": "pong",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "dependencies": {
     "express": "^4.8.3",
     "handlebars": "^2.0.0",
