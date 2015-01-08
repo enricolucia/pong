@@ -1,4 +1,7 @@
 # Pong!
+[![Build Status](https://travis-ci.org/enricolucia/pong.svg?branch=master)](https://travis-ci.org/enricolucia/pong)
+![Heroku](https://heroku-badge.herokuapp.com/?app=pongjs)
+
 ![alt tag](http://media.engadget.com/img/product/13/a77/atari-super-pong-c-140-kvy-100.jpg)
 
 Live demo here: [heroku]
@@ -33,10 +36,10 @@ Install npm dependencies and gulp app deployment.
 $ npm install
 $ gulp
 ```
-### Instruction
+### How to play
 - Open it in your browser from mobile or from your machine (opt in mobile emulation on your debugger)
 - Create a game
-- Join the room with a different device or different browser
+- Wait for the opponent to join the room or with a different device or different browser
 - Play it!
 
 ### Development
