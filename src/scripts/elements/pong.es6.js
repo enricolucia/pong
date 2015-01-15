@@ -72,6 +72,8 @@ export class Pong {
     this.actor.fillStyle = '#ffffff';
     this.actor.halfHeight = this.actor.height / 2;
     this.actor.halfWidth = this.actor.width / 2;
+    // reset time
+    this.resetTime = 500;
     //ball
     this.ball.x_speed = 10;
     this.ball.y_speed = 10;
@@ -199,7 +201,7 @@ export class Pong {
      if (this.dirPlayer === 'y' && this.pitch === 'left') {
       if (this.ball.x - this.ball.radius <= 0) {
         this.goal();
-        this._update.call(this, 1);
+        this._update.call(this, this.resetTime);
       } else if (this.ball.x + this.ball.radius >= _ctx.canvas.width) {
         this.ball.comingBall = true;
         this.ballComing(_ctx.canvas.height);
@@ -209,7 +211,7 @@ export class Pong {
     } else if (this.dirPlayer === 'y' && this.pitch === 'right') {
       if (this.ball.x + this.ball.radius >= _ctx.canvas.width) {
         this.goal();
-        this._update.call(this, 1);
+        this._update.call(this, this.resetTime);
       } else if (this.ball.x - this.ball.radius <= 0) {
         this.ball.comingBall = true;
         this.ballComing(_ctx.canvas.height);
@@ -219,7 +221,7 @@ export class Pong {
     } else if (this.dirPlayer === 'x' && this.pitch === 'left') {
       if (this.ball.y - this.ball.radius <= 0) {
         this.goal();
-        this._update.call(this, 1);
+        this._update.call(this, this.resetTime);
       } else if (this.ball.y + this.ball.radius >= _ctx.canvas.height) {
         this.ball.comingBall = true;
         this.ballComing(_ctx.canvas.width);
@@ -229,7 +231,7 @@ export class Pong {
     } else if (this.dirPlayer === 'x' && this.pitch === 'right') {
       if (this.ball.y + this.ball.radius >= _ctx.canvas.height) {
         this.goal();
-        this._update.call(this, 1);
+        this._update.call(this, this.resetTime);
       } else if (this.ball.y - this.ball.radius <= 0) {
         this.ball.comingBall = true;
         this.ballComing(_ctx.canvas.width);
