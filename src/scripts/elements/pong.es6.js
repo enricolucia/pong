@@ -42,6 +42,7 @@ export class Pong {
     _io.on('message', this.socketListener);
     _io.on('game:opponent-canvas', this.actor.updateRatio.bind(this.actor));
     _io.on('pong:goal-scored', this.goalHandler.bind(this));
+    _io.on('pong:player-left', this.playerLeft.bind(this));
     _io.on('pong:ball-coming', this.ballComingHandler.bind(this));
     this.scribbles = {
       actors: this.actor,
@@ -63,6 +64,14 @@ export class Pong {
     this.update();
     win.removeEventListener('touchstart', istance, true);
     this.touchListener();
+  }
+
+  playerLeft(message) {
+    var notifier = doc.createElement('div');
+    notifier.className = 'notifier visible';
+    notifier.textContent = message;
+    doc.body.appendChild(notifier);
+    this.ball.invisible = true;
   }
 
   config() {

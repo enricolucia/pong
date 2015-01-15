@@ -139,7 +139,20 @@ io.on('connection', function(socket) {
     socket.emit('game:token-created', {
       token: token
     });
+
+    socket.on('disconnect', function () {
+      playerLeft(sessions[socket.sessionId]['guest']);
+    });
+
   });
+
+  function playerLeft (player) {
+    console.log(player);
+    var data = {
+      message: 'Opponent left pong!'
+    };
+    player.emit('pong:player-left', data.message);
+  };
 
   socket.on('player:joining', function(data) {
     if (sessions[data.token]) {
@@ -158,5 +171,10 @@ io.on('connection', function(socket) {
         message: 'Token not valid.'
       });
     }
+
+  socket.on('disconnect', function () {
+    playerLeft(sessions[socket.sessionId]['host']);
+  });
+
   });
 });

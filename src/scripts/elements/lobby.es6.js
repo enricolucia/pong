@@ -70,7 +70,7 @@ export class Lobby {
 	}
 
 	onGameError(data) {
-		var notifier = doc.querySelector('.lobby .notifier');
+		var notifier = doc.querySelector('.notifier');
 		if (notifier.classList.contains('visible')) {
 			return;
 		}
