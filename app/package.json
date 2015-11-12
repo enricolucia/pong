@@ -1,0 +1,12 @@
+{
+  "name": "pong",
+  "private": true,
+  "version": "0.0.4",
+  "description": "pongng",
+  "repository": "https://github.com/enricolucia/pong",
+  "main": "../main.js",
+  "license": "MIT",
+  "devDependencies": {
+    "electron-prebuilt": "^0.34.0"
+  }
+}
